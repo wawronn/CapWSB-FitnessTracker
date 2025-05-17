@@ -36,4 +36,13 @@ interface UserRepository extends JpaRepository<User, Long> {
                 .collect(toList());
     }
 
+    default boolean deleteUserById(Long userId) {
+        if (findById(userId).isPresent()) {
+            deleteById(userId);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

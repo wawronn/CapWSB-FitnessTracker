@@ -3,10 +3,12 @@ package pl.wsb.fitnesstracker.user.internal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.wsb.fitnesstracker.user.api.User;
 import pl.wsb.fitnesstracker.user.api.UserDtoByEmail;
 import pl.wsb.fitnesstracker.user.api.UserDtoOlderThan;
 import pl.wsb.fitnesstracker.user.api.UserDtoSimple;
 
+import java.net.URI;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -28,13 +30,10 @@ class UserController {
     }
 
     @PostMapping
-    public UserDto addUser(@RequestBody UserDto userDto) throws InterruptedException {
-
-        // TODO: Implement the method to add a new user.
-        //  You can use the @RequestBody annotation to map the request body to the UserDto object.
-
-
-        return null;
+    public ResponseEntity<UserDto> addUser(@RequestBody UserDto userDto) throws InterruptedException {
+        final User newUser = userService.createUser(userMapper.toEntity(userDto));
+        URI location = URI.create("/v1/users/" + newUser.getId());
+        return ResponseEntity.created(location).body(userDto);
     }
 
     @GetMapping("/simple")
@@ -51,6 +50,16 @@ class UserController {
                 .map(userMapper::toDto)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{userId}")
+    public ResponseEntity<Void> deleteUserById(@PathVariable Long userId) {
+        boolean deleted = userService.deleteUserById(userId);
+        if (deleted) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping("/email")
