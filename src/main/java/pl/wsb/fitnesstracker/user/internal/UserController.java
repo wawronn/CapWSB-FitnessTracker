@@ -3,10 +3,7 @@ package pl.wsb.fitnesstracker.user.internal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.wsb.fitnesstracker.user.api.User;
-import pl.wsb.fitnesstracker.user.api.UserDtoByEmail;
-import pl.wsb.fitnesstracker.user.api.UserDtoOlderThan;
-import pl.wsb.fitnesstracker.user.api.UserDtoSimple;
+import pl.wsb.fitnesstracker.user.api.*;
 
 import java.net.URI;
 import java.time.LocalDate;
@@ -30,7 +27,7 @@ class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserDto> addUser(@RequestBody UserDto userDto) throws InterruptedException {
+    public ResponseEntity<UserDto> addUser(@RequestBody UserDto userDto) {
         final User newUser = userService.createUser(userMapper.toEntity(userDto));
         URI location = URI.create("/v1/users/" + newUser.getId());
         return ResponseEntity.created(location).body(userDto);
@@ -49,17 +46,20 @@ class UserController {
         return userService.getUser(userId)
                 .map(userMapper::toDto)
                 .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+                .orElseThrow(() -> new UserNotFoundException(userId));
     }
 
     @DeleteMapping("/{userId}")
     public ResponseEntity<Void> deleteUserById(@PathVariable Long userId) {
-        boolean deleted = userService.deleteUserById(userId);
-        if (deleted) {
-            return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        userService.deleteUserById(userId);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{userId}")
+    public ResponseEntity<UserDto> updateUserById(@PathVariable Long userId, @RequestBody UserDto userDto) {
+        User user = userMapper.toEntity(userDto);
+        User updatedUser = userService.updateUser(userId, user);
+        return ResponseEntity.ok(userMapper.toDto(updatedUser));
     }
 
     @GetMapping("/email")

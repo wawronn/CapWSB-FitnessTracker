@@ -1,11 +1,11 @@
 package pl.wsb.fitnesstracker.user.internal;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import pl.wsb.fitnesstracker.user.api.User;
-import pl.wsb.fitnesstracker.user.api.UserProvider;
-import pl.wsb.fitnesstracker.user.api.UserService;
+import pl.wsb.fitnesstracker.user.api.*;
+import pl.wsb.fitnesstracker.user.api.UserDto;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,8 +28,25 @@ class UserServiceImpl implements UserService, UserProvider {
     }
 
     @Override
-    public boolean deleteUserById(Long userId) {
-        return userRepository.deleteUserById(userId);
+    public void deleteUserById(Long userId) {
+        User userToDelete = userRepository.findById(userId)
+                .orElseThrow(() -> new UserNotFoundException(userId));
+        userRepository.delete(userToDelete);
+    }
+
+    @Override
+    public User updateUser(Long userId, User user) {
+        try {
+            User userToUpdate = userRepository.getReferenceById(userId);
+            userToUpdate.setFirstName(user.getFirstName());
+            userToUpdate.setLastName(user.getLastName());
+            userToUpdate.setBirthdate(user.getBirthdate());
+            userToUpdate.setEmail(user.getEmail());
+            userRepository.save(userToUpdate);
+            return userToUpdate;
+        } catch (EntityNotFoundException e) {
+            throw new UserNotFoundException(userId);
+        }
     }
 
     @Override
