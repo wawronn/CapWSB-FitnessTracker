@@ -1,8 +1,13 @@
 package pl.wsb.fitnesstracker.user.internal;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.wsb.fitnesstracker.user.api.UserDtoByEmail;
+import pl.wsb.fitnesstracker.user.api.UserDtoOlderThan;
+import pl.wsb.fitnesstracker.user.api.UserDtoSimple;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -32,4 +37,35 @@ class UserController {
         return null;
     }
 
+    @GetMapping("/simple")
+    public List<UserDtoSimple> getAllUsersSimple() {
+        return userService.findAllUsers()
+                .stream()
+                .map(userMapper::toDtoSimple)
+                .toList();
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<UserDto> getUserById(@PathVariable Long userId) {
+        return userService.getUser(userId)
+                .map(userMapper::toDto)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/email")
+    public List<UserDtoByEmail> getUsersByEmail(@RequestParam String email) {
+        return userService.findAllUsersByEmail(email)
+                .stream()
+                .map(userMapper::toDtoByEmail)
+                .toList();
+    }
+
+    @GetMapping("/older/{time}")
+    public List<UserDtoOlderThan> getUsersOlderThan(@PathVariable LocalDate time) {
+        return userService.findAllUsersOlderThan(time)
+                .stream()
+                .map(userMapper::toDtoOlderThan)
+                .toList();
+    }
 }
