@@ -14,7 +14,7 @@ serwisu FitnessTracker:
 
 - móc ich wyszukiwać, pobierać
 - móc wprowadzać nowych użytkowników do systemu
-- móc usuwać użytkowników z systemu
+- móc usuwać użytkowników z systemu (usuwac tylko z id wieksze od 10, bo inne maja constrainty)
 - móc aktualizować użytkowników
 
 ### Wymagania funkcjonalne

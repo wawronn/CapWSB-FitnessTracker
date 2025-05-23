@@ -1,12 +1,13 @@
 package pl.wsb.fitnesstracker.user.internal;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import pl.wsb.fitnesstracker.user.api.User;
-import pl.wsb.fitnesstracker.user.api.UserProvider;
-import pl.wsb.fitnesstracker.user.api.UserService;
+import pl.wsb.fitnesstracker.user.api.*;
+import pl.wsb.fitnesstracker.user.api.UserDto;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +28,28 @@ class UserServiceImpl implements UserService, UserProvider {
     }
 
     @Override
+    public void deleteUserById(Long userId) {
+        User userToDelete = userRepository.findById(userId)
+                .orElseThrow(() -> new UserNotFoundException(userId));
+        userRepository.delete(userToDelete);
+    }
+
+    @Override
+    public User updateUser(Long userId, User user) {
+        try {
+            User userToUpdate = userRepository.getReferenceById(userId);
+            userToUpdate.setFirstName(user.getFirstName());
+            userToUpdate.setLastName(user.getLastName());
+            userToUpdate.setBirthdate(user.getBirthdate());
+            userToUpdate.setEmail(user.getEmail());
+            userRepository.save(userToUpdate);
+            return userToUpdate;
+        } catch (EntityNotFoundException e) {
+            throw new UserNotFoundException(userId);
+        }
+    }
+
+    @Override
     public Optional<User> getUser(final Long userId) {
         return userRepository.findById(userId);
     }
@@ -39,6 +62,16 @@ class UserServiceImpl implements UserService, UserProvider {
     @Override
     public List<User> findAllUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public List<User> findAllUsersByEmail(String email) {
+        return userRepository.findUsersByEmail(email);
+    }
+
+    @Override
+    public List<User> findAllUsersOlderThan(LocalDate birthdate) {
+        return userRepository.findUsersOlderThan(birthdate);
     }
 
 }
