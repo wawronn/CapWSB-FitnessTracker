@@ -14,7 +14,7 @@ serwisu FitnessTracker:
 
 - móc ich wyszukiwać, pobierać
 - móc wprowadzać nowych użytkowników do systemu
-- móc usuwać użytkowników z systemu
+- móc usuwać użytkowników z systemu (usuwac tylko z id wieksze od 10, bo inne maja constrainty)
 - móc aktualizować użytkowników
 
 ### Wymagania funkcjonalne
@@ -45,4 +45,5 @@ Stworzone API powinno pozwalać na:
 - [ ] kod powinien być odpowiednio udokumentowany za pomocą JavaDoc
 - [ ] do kodu powinna zostać dołączona wyeksportowana kolekcja zapytań z programu Postman, pozwalająca przetestować
   stworzone API
+  !!! Kolekcja w katalogu resources
 - [ ] rozwiązanie powinno wykorzystywać rekordy (Java 16+) do definicji obiektów transferu danych (DTO)

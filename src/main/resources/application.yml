@@ -7,3 +7,10 @@ spring:
   h2:
     console:
       enabled: true
+  profiles:
+    active: loadInitialData
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v1/api-docs
