@@ -1,4 +1,4 @@
-@NonNullByDefault
+// @NonNullByDefault
 package pl.wsb.fitnesstracker.achievement;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;

@@ -1,4 +1,4 @@
-@NonNullByDefault
+// @NonNullByDefault
 package pl.wsb.fitnesstracker.notification;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;

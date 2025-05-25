@@ -102,8 +102,7 @@ class UserController {
 
     @PutMapping("/{userId}")
     public ResponseEntity<UserDto> updateUserById(@PathVariable Long userId, @RequestBody UserDto userDto) {
-        User user = userMapper.toEntity(userDto);
-        User updatedUser = userService.updateUser(userId, user);
+        User updatedUser = userService.updateUser(userId, userDto);
         return ResponseEntity.ok(userMapper.toDto(updatedUser));
     }
 

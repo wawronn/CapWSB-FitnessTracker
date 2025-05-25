@@ -1,10 +1,7 @@
 package pl.wsb.fitnesstracker.user.internal;
 
 import org.springframework.stereotype.Component;
-import pl.wsb.fitnesstracker.user.api.User;
-import pl.wsb.fitnesstracker.user.api.UserDtoByEmail;
-import pl.wsb.fitnesstracker.user.api.UserDtoOlderThan;
-import pl.wsb.fitnesstracker.user.api.UserDtoSimple;
+import pl.wsb.fitnesstracker.user.api.*;
 
 @Component
 class UserMapper {
