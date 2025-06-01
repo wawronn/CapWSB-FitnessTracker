@@ -1,7 +1,5 @@
 package pl.wsb.fitnesstracker.training.api;
 
-import pl.wsb.fitnesstracker.training.internal.TrainingInputDto;
-
 public interface TrainingService {
 
     /**

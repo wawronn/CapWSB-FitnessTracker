@@ -24,7 +24,7 @@ class TrainingMapper {
         );
     }
 
-    public Training toEntity(TrainingInputDto trainingDto) {
+    public Training toEntity(TrainingFlatDto trainingDto) {
         return new Training(
         null,
             trainingDto.getStartTime(),

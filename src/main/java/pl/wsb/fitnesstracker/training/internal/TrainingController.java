@@ -1,10 +1,13 @@
 package pl.wsb.fitnesstracker.training.internal;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.wsb.fitnesstracker.training.api.Training;
+import pl.wsb.fitnesstracker.views.InOutView;
 
 import java.net.URI;
 import java.util.Date;
@@ -28,7 +31,8 @@ class TrainingController {
     }
 
     @PostMapping
-    ResponseEntity<TrainingDto> postTraining(@RequestBody TrainingInputDto trainingDto) {
+    @JsonView(InOutView.Output.class)
+    ResponseEntity<TrainingDto> createTraining(@Valid @RequestBody @JsonView(InOutView.Input.class) TrainingFlatDto trainingDto) {
         Training newTraining = trainingService.addTraining(trainingMapper.toEntity(trainingDto), trainingDto.getUserId());
         TrainingDto newTrainingDto =  trainingMapper.toDto(newTraining);
         URI location = URI.create("/v1/trainings/" + newTrainingDto.getId());
@@ -36,7 +40,8 @@ class TrainingController {
     }
 
     @PutMapping("/{trainingId}")
-    ResponseEntity<TrainingDto> putTraining(@PathVariable Long trainingId, @RequestBody TrainingInputDto trainingDto) {
+    @JsonView(InOutView.Output.class)
+    ResponseEntity<TrainingDto> updateTraining(@PathVariable Long trainingId, @Valid @RequestBody @JsonView(InOutView.Input.class) TrainingFlatDto trainingDto) {
         Training updatedTraining = trainingService.updateTraining(trainingMapper.toEntity(trainingDto), trainingId, trainingDto.getUserId());
         return ResponseEntity.ok(trainingMapper.toDto(updatedTraining));
     }

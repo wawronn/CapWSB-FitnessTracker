@@ -1,28 +1,37 @@
 package pl.wsb.fitnesstracker.training.internal;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonView;
+import pl.wsb.fitnesstracker.views.InOutView;
 
 import java.util.Date;
 
-public class TrainingInputDto {
+class TrainingFlatDto {
 
+    @JsonView(InOutView.Output.class)
     private final Long id;
 
+    @JsonView(InOutView.Input.class)
     private final Long userId;
 
+    @JsonView(InOutView.Input.class)
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private final Date startTime;
 
+    @JsonView(InOutView.Input.class)
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private final Date endTime;
 
+    @JsonView(InOutView.Input.class)
     private final ActivityType activityType;
 
+    @JsonView(InOutView.Input.class)
     private final double distance;
 
+    @JsonView(InOutView.Input.class)
     private final double averageSpeed;
 
-    TrainingInputDto(Long id, Long userId, Date startTime, Date endTime, ActivityType activityType, double distance, double averageSpeed) {
+    TrainingFlatDto(Long id, Long userId, Date startTime, Date endTime, ActivityType activityType, double distance, double averageSpeed) {
         this.id = id;
         this.userId = userId;
         this.startTime = startTime;

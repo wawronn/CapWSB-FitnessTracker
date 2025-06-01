@@ -1,52 +1,25 @@
 {
 	"info": {
-		"_postman_id": "228523e8-5100-477b-ad37-3836a6b2300b",
+		"_postman_id": "92f4f8bb-8a32-479d-a832-dd32ed8c4fd7",
 		"name": "WSB Fitness Tracker API",
 		"description": "API for WSB Fitness Tracker\n\nContact Support:\n Name: wawronn & maciek\n Email: wsb_team@example.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "45046624",
-		"_collection_link": "https://geraltzrivii-1842065.postman.co/workspace/Geralt-Z-Rivii's-Workspace~17e03e3a-6828-4695-845a-08f805a08e27/collection/45046624-228523e8-5100-477b-ad37-3836a6b2300b?action=share&source=collection_link&creator=45046624"
+		"_collection_link": "https://geraltzrivii-1842065.postman.co/workspace/Geralt-Z-Rivii's-Workspace~17e03e3a-6828-4695-845a-08f805a08e27/collection/45046624-92f4f8bb-8a32-479d-a832-dd32ed8c4fd7?action=share&source=collection_link&creator=45046624"
 	},
 	"item": [
 		{
-			"name": "v1/users",
+			"name": "v1",
 			"item": [
 				{
-					"name": "{userId}",
+					"name": "users",
 					"item": [
 						{
-							"name": "get User By Id",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/v1/users/:userId",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										":userId"
-									],
-									"variable": [
-										{
-											"key": "userId",
-											"value": "10",
-											"description": "(Required) "
-										}
-									]
-								}
-							},
-							"response": [
+							"name": "{userId}",
+							"item": [
 								{
-									"name": "OK",
-									"originalRequest": {
+									"name": "get User By Id",
+									"request": {
 										"method": "GET",
 										"header": [
 											{
@@ -67,74 +40,65 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-618796",
+													"value": "-30292653",
 													"description": "(Required) "
 												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"body": "{\n  \"Id\": 14734020,\n  \"firstName\": \"ut ex occaecat ut\",\n  \"lastName\": \"laboris nulla\",\n  \"birthdate\": \"1973-04-08\",\n  \"email\": \"Lorem\"\n}"
-								}
-							]
-						},
-						{
-							"name": "update User By Id",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"firstName\": \"Grzegorz\",\n  \"lastName\": \"Brzęczyszczykiewicz\",\n  \"birthdate\": \"1914-01-01\",\n  \"email\": \"franekdolas39@gmail.com\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/v1/users/:userId",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										":userId"
-									],
-									"variable": [
-										{
-											"key": "userId",
-											"value": "10",
-											"description": "(Required) "
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "-30292653",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 31289004,\n  \"firstName\": \"qui irure\",\n  \"lastName\": \"qui velit exercitation culpa adipisicing\",\n  \"birthdate\": \"2005-08-04\",\n  \"email\": \"sit voluptate deserunt ad\"\n}"
 										}
 									]
-								}
-							},
-							"response": [
+								},
 								{
-									"name": "OK",
-									"originalRequest": {
+									"name": "update User By Id",
+									"request": {
 										"method": "PUT",
 										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
 											{
 												"key": "Accept",
 												"value": "application/json"
@@ -142,7 +106,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"Id\": 14734020,\n  \"firstName\": \"ut ex occaecat ut\",\n  \"lastName\": \"laboris nulla\",\n  \"birthdate\": \"1973-04-08\",\n  \"email\": \"Lorem\"\n}",
+											"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -162,54 +126,68 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-618796",
+													"value": "-30292653",
 													"description": "(Required) "
 												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"body": "{\n  \"Id\": 14734020,\n  \"firstName\": \"ut ex occaecat ut\",\n  \"lastName\": \"laboris nulla\",\n  \"birthdate\": \"1973-04-08\",\n  \"email\": \"Lorem\"\n}"
-								}
-							]
-						},
-						{
-							"name": "delete User By Id",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{baseUrl}}/v1/users/:userId",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										":userId"
-									],
-									"variable": [
-										{
-											"key": "userId",
-											"value": "11",
-											"description": "(Required) "
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "-30292653",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 31289004,\n  \"firstName\": \"qui irure\",\n  \"lastName\": \"qui velit exercitation culpa adipisicing\",\n  \"birthdate\": \"2005-08-04\",\n  \"email\": \"sit voluptate deserunt ad\"\n}"
 										}
 									]
-								}
-							},
-							"response": [
+								},
 								{
-									"name": "OK",
-									"originalRequest": {
+									"name": "delete User By Id",
+									"request": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
@@ -225,53 +203,56 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-618796",
+													"value": "-30292653",
 													"description": "(Required) "
 												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
+									"response": [
 										{
-											"key": "Content-Type",
-											"value": "text/plain"
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "-30292653",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
 										}
-									],
-									"cookie": [],
-									"body": ""
+									]
 								}
 							]
-						}
-					]
-				},
-				{
-					"name": "get All Users",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/v1/users",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1",
-								"users"
-							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "OK",
-							"originalRequest": {
+							"name": "get All Users",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -290,60 +271,51 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": -36520899,\n    \"firstName\": \"elit ut n\",\n    \"lastName\": \"enim\",\n    \"birthdate\": \"2004-10-12\",\n    \"email\": \"proident ullamco\"\n  },\n  {\n    \"id\": -32449998,\n    \"firstName\": \"sint commodo amet\",\n    \"lastName\": \"nisi ipsum deserunt irure\",\n    \"birthdate\": \"1968-04-15\",\n    \"email\": \"in Duis eu cupidatat\"\n  }\n]"
 								}
-							],
-							"cookie": [],
-							"body": "[\n  {\n    \"Id\": 94678848,\n    \"firstName\": \"Lorem\",\n    \"lastName\": \"\",\n    \"birthdate\": \"1947-12-24\",\n    \"email\": \"irure dolor magna exercitation\"\n  },\n  {\n    \"Id\": -99901791,\n    \"firstName\": \"sed et\",\n    \"lastName\": \"dolore sit dolore eiusmod\",\n    \"birthdate\": \"2015-01-28\",\n    \"email\": \"do quis in sunt dolore\"\n  }\n]"
-						}
-					]
-				},
-				{
-					"name": "add User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"firstName\": \"Grzegorz\",\n    \"lastName\": \"Brzęczyszczykiewicz\",\n    \"birthdate\": \"1914-01-01\",\n    \"email\": \"real.franek.dolas@gmail.com\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/v1/users",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1",
-								"users"
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "OK",
-							"originalRequest": {
+							"name": "add User",
+							"request": {
 								"method": "POST",
 								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
 									{
 										"key": "Accept",
 										"value": "application/json"
@@ -351,7 +323,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Id\": 14734020,\n  \"firstName\": \"ut ex occaecat ut\",\n  \"lastName\": \"laboris nulla\",\n  \"birthdate\": \"1973-04-08\",\n  \"email\": \"Lorem\"\n}",
+									"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -369,46 +341,54 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 31289004,\n  \"firstName\": \"qui irure\",\n  \"lastName\": \"qui velit exercitation culpa adipisicing\",\n  \"birthdate\": \"2005-08-04\",\n  \"email\": \"sit voluptate deserunt ad\"\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n  \"Id\": 14734020,\n  \"firstName\": \"ut ex occaecat ut\",\n  \"lastName\": \"laboris nulla\",\n  \"birthdate\": \"1973-04-08\",\n  \"email\": \"Lorem\"\n}"
-						}
-					]
-				},
-				{
-					"name": "get All Users Simple",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/v1/users/simple",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"simple"
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "OK",
-							"originalRequest": {
+							"name": "get All Users Simple",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -428,54 +408,46 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								}
-							],
-							"cookie": [],
-							"body": "[\n  {\n    \"id\": -94334379,\n    \"firstName\": \"laboris nostrud sint id\",\n    \"lastName\": \"officia in reprehenderit\"\n  },\n  {\n    \"id\": -35033154,\n    \"firstName\": \"consequat ipsum exercitation sunt eu\",\n    \"lastName\": \"Lorem non\"\n  }\n]"
-						}
-					]
-				},
-				{
-					"name": "get Users Older Than",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/v1/users/older/:time",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"older",
-								":time"
-							],
-							"variable": [
-								{
-									"key": "time",
-									"value": "1949-12-25",
-									"description": "(Required) "
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/simple",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"simple"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 93364778,\n    \"firstName\": \"commodo Duis Ut ea\",\n    \"lastName\": \"ad veniam enim\"\n  },\n  {\n    \"id\": -43312526,\n    \"firstName\": \"sit ut\",\n    \"lastName\": \"aliquip adipisicing non\"\n  }\n]"
 								}
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "OK",
-							"originalRequest": {
+							"name": "get Users Older Than",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -497,59 +469,60 @@
 									"variable": [
 										{
 											"key": "time",
-											"value": "1949-12-25",
+											"value": "1946-05-30",
 											"description": "(Required) "
 										}
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								}
-							],
-							"cookie": [],
-							"body": "[\n  {\n    \"Id\": -57167109,\n    \"firstName\": \"sunt\",\n    \"lastName\": \"consequat\",\n    \"birthdate\": \"1990-01-10\"\n  },\n  {\n    \"Id\": 87785414,\n    \"firstName\": \"quis ut et fugiat\",\n    \"lastName\": \"incididunt adipisicing\",\n    \"birthdate\": \"1946-05-03\"\n  }\n]"
-						}
-					]
-				},
-				{
-					"name": "get Users By Email",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/v1/users/email?email=gmail",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"email"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "gmail",
-									"description": "(Required) "
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/older/:time",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"older",
+												":time"
+											],
+											"variable": [
+												{
+													"key": "time",
+													"value": "1946-05-30",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"Id\": 55926047,\n    \"firstName\": \"dolore ullamco\",\n    \"lastName\": \"amet Ut reprehenderit aute\",\n    \"birthdate\": \"2006-05-25\"\n  },\n  {\n    \"Id\": -86212078,\n    \"firstName\": \"nulla dolor\",\n    \"lastName\": \"ea ipsum\",\n    \"birthdate\": \"2011-01-23\"\n  }\n]"
 								}
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "OK",
-							"originalRequest": {
+							"name": "get Users By Email",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -558,7 +531,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/v1/users/email?email=dolor non t",
+									"raw": "{{baseUrl}}/v1/users/email?email=mollit ut aute laboris ad",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -570,22 +543,512 @@
 									"query": [
 										{
 											"key": "email",
-											"value": "dolor non t"
+											"value": "mollit ut aute laboris ad",
+											"description": "(Required) "
 										}
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/email?email=mollit ut aute laboris ad",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"email"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "mollit ut aute laboris ad"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": -23755665,\n    \"email\": \"culpa anim eu cillum\"\n  },\n  {\n    \"id\": -77871964,\n    \"email\": \"nisi aliquip c\"\n  }\n]"
 								}
-							],
-							"cookie": [],
-							"body": "[\n  {\n    \"id\": -24159575,\n    \"email\": \"aliquip aute proident\"\n  },\n  {\n    \"id\": 98993042,\n    \"email\": \"irure anim incididunt in\"\n  }\n]"
+							]
+						}
+					]
+				},
+				{
+					"name": "trainings",
+					"item": [
+						{
+							"name": "get All Trainings",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/trainings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"trainings"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/trainings",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"trainings"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "create Training",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/trainings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"trainings"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/trainings",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"trainings"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 65000240,\n  \"user\": {\n    \"id\": 62868744,\n    \"firstName\": \"in est proident qui\",\n    \"lastName\": \"aliqua ullamco do\",\n    \"birthdate\": \"1999-08-02\",\n    \"email\": \"sed\"\n  },\n  \"startTime\": \"1963-06-18T05:03:50.843Z\",\n  \"endTime\": \"1979-02-24T15:27:15.337Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 19496712.213180885,\n  \"averageSpeed\": -28730348.394039452\n}"
+								}
+							]
+						},
+						{
+							"name": "update Training",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/trainings/:trainingId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"trainings",
+										":trainingId"
+									],
+									"variable": [
+										{
+											"key": "trainingId",
+											"value": "-30292653",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/trainings/:trainingId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"trainings",
+												":trainingId"
+											],
+											"variable": [
+												{
+													"key": "trainingId",
+													"value": "-30292653",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 65000240,\n  \"user\": {\n    \"id\": 62868744,\n    \"firstName\": \"in est proident qui\",\n    \"lastName\": \"aliqua ullamco do\",\n    \"birthdate\": \"1999-08-02\",\n    \"email\": \"sed\"\n  },\n  \"startTime\": \"1963-06-18T05:03:50.843Z\",\n  \"endTime\": \"1979-02-24T15:27:15.337Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 19496712.213180885,\n  \"averageSpeed\": -28730348.394039452\n}"
+								}
+							]
+						},
+						{
+							"name": "get Training By User Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/trainings/user/:userId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"trainings",
+										"user",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "-30292653",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/trainings/user/:userId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"trainings",
+												"user",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "-30292653",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "get Trainings By After Time",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/trainings/finished/:afterTime",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"trainings",
+										"finished",
+										":afterTime"
+									],
+									"variable": [
+										{
+											"key": "afterTime",
+											"value": "2018-05-07T07:14:29.714Z",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/trainings/finished/:afterTime",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"trainings",
+												"finished",
+												":afterTime"
+											],
+											"variable": [
+												{
+													"key": "afterTime",
+													"value": "2018-05-07T07:14:29.714Z",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "get Trainings By Activity Type",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/trainings/activityType?activityType=WALKING",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"trainings",
+										"activityType"
+									],
+									"query": [
+										{
+											"key": "activityType",
+											"value": "WALKING",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/trainings/activityType?activityType=WALKING",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"trainings",
+												"activityType"
+											],
+											"query": [
+												{
+													"key": "activityType",
+													"value": "WALKING"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+								}
+							]
 						}
 					]
 				}

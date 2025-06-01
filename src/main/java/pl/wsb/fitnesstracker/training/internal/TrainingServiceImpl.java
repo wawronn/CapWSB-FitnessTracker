@@ -36,7 +36,7 @@ public class TrainingServiceImpl implements TrainingProvider, TrainingService {
 
     @Override
     public List<Training> getTrainingsByUserId(Long userId) {
-        return trainingRepository.findById(userId).stream().toList();
+        return trainingRepository.findTrainingsByUserId(userId).stream().toList();
     }
 
     @Override
