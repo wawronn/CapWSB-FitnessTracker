@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import pl.wsb.fitnesstracker.user.api.*;
-import pl.wsb.fitnesstracker.user.api.UserDto;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -35,13 +34,13 @@ class UserServiceImpl implements UserService, UserProvider {
     }
 
     @Override
-    public User updateUser(Long userId, User user) {
+    public User updateUser(Long userId, UserDto userDto) {
         try {
             User userToUpdate = userRepository.getReferenceById(userId);
-            userToUpdate.setFirstName(user.getFirstName());
-            userToUpdate.setLastName(user.getLastName());
-            userToUpdate.setBirthdate(user.getBirthdate());
-            userToUpdate.setEmail(user.getEmail());
+            userToUpdate.setFirstName(userDto.firstName());
+            userToUpdate.setLastName(userDto.lastName());
+            userToUpdate.setBirthdate(userDto.birthdate());
+            userToUpdate.setEmail(userDto.email());
             userRepository.save(userToUpdate);
             return userToUpdate;
         } catch (EntityNotFoundException e) {
