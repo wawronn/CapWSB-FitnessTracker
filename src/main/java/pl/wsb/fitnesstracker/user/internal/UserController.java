@@ -1,9 +1,13 @@
 package pl.wsb.fitnesstracker.user.internal;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.wsb.fitnesstracker.errors.ErrorDto;
 import pl.wsb.fitnesstracker.user.api.*;
+import pl.wsb.fitnesstracker.views.InOutView;
 
 import java.net.URI;
 import java.time.LocalDate;
@@ -43,10 +47,11 @@ class UserController {
      */
 
     @PostMapping
-    public ResponseEntity<UserDto> addUser(@RequestBody UserDto userDto) {
+    @JsonView(InOutView.Output.class)
+    public ResponseEntity<UserDto> addUser(@RequestBody @JsonView({InOutView.Input.class}) UserDto userDto) {
         final User newUser = userService.createUser(userMapper.toEntity(userDto));
         URI location = URI.create("/v1/users/" + newUser.getId());
-        return ResponseEntity.created(location).body(userDto);
+        return ResponseEntity.created(location).body(userMapper.toDto(newUser));
     }
 
     /**
@@ -101,9 +106,9 @@ class UserController {
      */
 
     @PutMapping("/{userId}")
-    public ResponseEntity<UserDto> updateUserById(@PathVariable Long userId, @RequestBody UserDto userDto) {
-        User user = userMapper.toEntity(userDto);
-        User updatedUser = userService.updateUser(userId, user);
+    @JsonView(InOutView.Output.class)
+    public ResponseEntity<UserDto> updateUserById(@PathVariable Long userId, @RequestBody @JsonView({InOutView.Input.class}) UserDto userDto) {
+        User updatedUser = userService.updateUser(userId, userDto);
         return ResponseEntity.ok(userMapper.toDto(updatedUser));
     }
 
@@ -135,5 +140,18 @@ class UserController {
                 .stream()
                 .map(userMapper::toDtoOlderThan)
                 .toList();
+    }
+
+    /**
+     *
+     * Obsługa błędu "DataIntegrityViolation" - naruszenie klucza głównego (powtórzony adres e-mail)
+     *
+     * @param e - wyjątek
+     * @return ErrorDto informacja o błędize
+     */
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ErrorDto> handleDataIntegrityViolationException(DataIntegrityViolationException e) {
+        return ResponseEntity.internalServerError().body(new ErrorDto("Użytkownik z takim adresem e-mail już istnieje"));
     }
 }
