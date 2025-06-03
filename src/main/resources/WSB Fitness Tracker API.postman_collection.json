@@ -1,11 +1,11 @@
 {
 	"info": {
-		"_postman_id": "92f4f8bb-8a32-479d-a832-dd32ed8c4fd7",
-		"name": "WSB Fitness Tracker API",
+		"_postman_id": "88e813b8-50ae-4fe6-b1bd-d94355610cc4",
+		"name": "WSB Fitness Tracker API Final",
 		"description": "API for WSB Fitness Tracker\n\nContact Support:\n Name: wawronn & maciek\n Email: wsb_team@example.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "45046624",
-		"_collection_link": "https://geraltzrivii-1842065.postman.co/workspace/Geralt-Z-Rivii's-Workspace~17e03e3a-6828-4695-845a-08f805a08e27/collection/45046624-92f4f8bb-8a32-479d-a832-dd32ed8c4fd7?action=share&source=collection_link&creator=45046624"
+		"_collection_link": "https://geraltzrivii-1842065.postman.co/workspace/Geralt-Z-Rivii's-Workspace~17e03e3a-6828-4695-845a-08f805a08e27/collection/45046624-88e813b8-50ae-4fe6-b1bd-d94355610cc4?action=share&source=collection_link&creator=45046624"
 	},
 	"item": [
 		{
@@ -40,7 +40,7 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-30292653",
+													"value": "10",
 													"description": "(Required) "
 												}
 											]
@@ -70,7 +70,7 @@
 													"variable": [
 														{
 															"key": "userId",
-															"value": "-30292653",
+															"value": "-12156690",
 															"description": "(Required) "
 														}
 													]
@@ -86,7 +86,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": 31289004,\n  \"firstName\": \"qui irure\",\n  \"lastName\": \"qui velit exercitation culpa adipisicing\",\n  \"birthdate\": \"2005-08-04\",\n  \"email\": \"sit voluptate deserunt ad\"\n}"
+											"body": "{\n  \"id\": -19724226,\n  \"firstName\": \"dolo\",\n  \"lastName\": \"ut ullam\",\n  \"birthdate\": \"2023-11-24\",\n  \"email\": \"dolore ex id culpa\"\n}"
 										}
 									]
 								},
@@ -106,7 +106,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
+											"raw": "{\n    \"firstName\": \"Taylor\",\n    \"lastName\": \"Swift\",\n    \"birthdate\": \"1996-06-03\",\n    \"email\": \"Taylor.Swift@domain.com\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -126,7 +126,7 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-30292653",
+													"value": "10",
 													"description": "(Required) "
 												}
 											]
@@ -145,7 +145,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
+													"raw": "{\n  \"firstName\": \"enim qui\",\n  \"lastName\": \"veniam consectetur commodo\",\n  \"birthdate\": \"1980-06-17\",\n  \"email\": \"in qui eu\"\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -165,7 +165,7 @@
 													"variable": [
 														{
 															"key": "userId",
-															"value": "-30292653",
+															"value": "-12156690",
 															"description": "(Required) "
 														}
 													]
@@ -181,7 +181,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": 31289004,\n  \"firstName\": \"qui irure\",\n  \"lastName\": \"qui velit exercitation culpa adipisicing\",\n  \"birthdate\": \"2005-08-04\",\n  \"email\": \"sit voluptate deserunt ad\"\n}"
+											"body": "{\n  \"id\": -19724226,\n  \"firstName\": \"dolo\",\n  \"lastName\": \"ut ullam\",\n  \"birthdate\": \"2023-11-24\",\n  \"email\": \"dolore ex id culpa\"\n}"
 										}
 									]
 								},
@@ -203,7 +203,7 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-30292653",
+													"value": "11",
 													"description": "(Required) "
 												}
 											]
@@ -228,7 +228,7 @@
 													"variable": [
 														{
 															"key": "userId",
-															"value": "-30292653",
+															"value": "-12156690",
 															"description": "(Required) "
 														}
 													]
@@ -303,7 +303,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": -36520899,\n    \"firstName\": \"elit ut n\",\n    \"lastName\": \"enim\",\n    \"birthdate\": \"2004-10-12\",\n    \"email\": \"proident ullamco\"\n  },\n  {\n    \"id\": -32449998,\n    \"firstName\": \"sint commodo amet\",\n    \"lastName\": \"nisi ipsum deserunt irure\",\n    \"birthdate\": \"1968-04-15\",\n    \"email\": \"in Duis eu cupidatat\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 81460778,\n    \"firstName\": \"id amet Excepteur\",\n    \"lastName\": \"dolore eu\",\n    \"birthdate\": \"1999-03-12\",\n    \"email\": \"culpa exercitation Ut\"\n  },\n  {\n    \"id\": -71878352,\n    \"firstName\": \"ut cupidatat\",\n    \"lastName\": \"in veniam\",\n    \"birthdate\": \"2013-06-02\",\n    \"email\": \"laboris veniam aliqua Excepteur\"\n  }\n]"
 								}
 							]
 						},
@@ -323,7 +323,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
+									"raw": "{\n  \"firstName\": \"Franciszek\",\n  \"lastName\": \"Dolas\",\n  \"birthdate\": \"1914-01-01\",\n  \"email\": \"franek.dolas@wp.pl\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -354,7 +354,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"firstName\": \"ut nostrud ut\",\n  \"lastName\": \"qui aliqua ullamc\",\n  \"birthdate\": \"1987-05-29\",\n  \"email\": \"ut nisi\"\n}",
+											"raw": "{\n  \"firstName\": \"enim qui\",\n  \"lastName\": \"veniam consectetur commodo\",\n  \"birthdate\": \"1980-06-17\",\n  \"email\": \"in qui eu\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -382,7 +382,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": 31289004,\n  \"firstName\": \"qui irure\",\n  \"lastName\": \"qui velit exercitation culpa adipisicing\",\n  \"birthdate\": \"2005-08-04\",\n  \"email\": \"sit voluptate deserunt ad\"\n}"
+									"body": "{\n  \"id\": -19724226,\n  \"firstName\": \"dolo\",\n  \"lastName\": \"ut ullam\",\n  \"birthdate\": \"2023-11-24\",\n  \"email\": \"dolore ex id culpa\"\n}"
 								}
 							]
 						},
@@ -441,7 +441,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 93364778,\n    \"firstName\": \"commodo Duis Ut ea\",\n    \"lastName\": \"ad veniam enim\"\n  },\n  {\n    \"id\": -43312526,\n    \"firstName\": \"sit ut\",\n    \"lastName\": \"aliquip adipisicing non\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 53876000,\n    \"firstName\": \"ipsum\",\n    \"lastName\": \"ullamco quis incididunt enim culpa\"\n  },\n  {\n    \"id\": -76412843,\n    \"firstName\": \"magna quis fugiat aute qui\",\n    \"lastName\": \"ut incididunt commodo elit\"\n  }\n]"
 								}
 							]
 						},
@@ -469,7 +469,7 @@
 									"variable": [
 										{
 											"key": "time",
-											"value": "1946-05-30",
+											"value": "2003-08-09",
 											"description": "(Required) "
 										}
 									]
@@ -500,7 +500,7 @@
 											"variable": [
 												{
 													"key": "time",
-													"value": "1946-05-30",
+													"value": "2003-08-09",
 													"description": "(Required) "
 												}
 											]
@@ -516,7 +516,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"Id\": 55926047,\n    \"firstName\": \"dolore ullamco\",\n    \"lastName\": \"amet Ut reprehenderit aute\",\n    \"birthdate\": \"2006-05-25\"\n  },\n  {\n    \"Id\": -86212078,\n    \"firstName\": \"nulla dolor\",\n    \"lastName\": \"ea ipsum\",\n    \"birthdate\": \"2011-01-23\"\n  }\n]"
+									"body": "[\n  {\n    \"Id\": 35787089,\n    \"firstName\": \"deserunt minim\",\n    \"lastName\": \"ei\",\n    \"birthdate\": \"2017-09-05\"\n  },\n  {\n    \"Id\": 85828468,\n    \"firstName\": \"aute labore minim\",\n    \"lastName\": \"commodo Duis consequat quis\",\n    \"birthdate\": \"1988-07-07\"\n  }\n]"
 								}
 							]
 						},
@@ -531,7 +531,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/v1/users/email?email=mollit ut aute laboris ad",
+									"raw": "{{baseUrl}}/v1/users/email?email=franek",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -543,7 +543,7 @@
 									"query": [
 										{
 											"key": "email",
-											"value": "mollit ut aute laboris ad",
+											"value": "franek",
 											"description": "(Required) "
 										}
 									]
@@ -561,7 +561,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/v1/users/email?email=mollit ut aute laboris ad",
+											"raw": "{{baseUrl}}/v1/users/email?email=Ut adipisicing con",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -573,7 +573,7 @@
 											"query": [
 												{
 													"key": "email",
-													"value": "mollit ut aute laboris ad"
+													"value": "Ut adipisicing con"
 												}
 											]
 										}
@@ -588,7 +588,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": -23755665,\n    \"email\": \"culpa anim eu cillum\"\n  },\n  {\n    \"id\": -77871964,\n    \"email\": \"nisi aliquip c\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": 97971857,\n    \"email\": \"laborum mollit elit nulla\"\n  },\n  {\n    \"id\": 45591499,\n    \"email\": \"irure esse consectetur\"\n  }\n]"
 								}
 							]
 						}
@@ -650,7 +650,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+									"body": "[\n  {\n    \"id\": 1465287,\n    \"user\": {\n      \"id\": -48916939,\n      \"firstName\": \"qui aliqua\",\n      \"lastName\": \"dolore ex ea incididunt\",\n      \"birthdate\": \"1955-07-30\",\n      \"email\": \"consectetur ea dolore officia\"\n    },\n    \"startTime\": \"1978-04-14T14:59:48.858Z\",\n    \"endTime\": \"2007-06-28T23:05:32.789Z\",\n    \"activityType\": \"SWIMMING\",\n    \"distance\": 3271712.881821558,\n    \"averageSpeed\": 69256046.22183695\n  },\n  {\n    \"id\": -70602661,\n    \"user\": {\n      \"id\": -80837268,\n      \"firstName\": \"ut deserunt\",\n      \"lastName\": \"ea est Excepteur ut pariatur\",\n      \"birthdate\": \"2021-09-03\",\n      \"email\": \"voluptate ex commodo\"\n    },\n    \"startTime\": \"1975-03-25T11:56:03.640Z\",\n    \"endTime\": \"1974-10-25T06:32:43.047Z\",\n    \"activityType\": \"WALKING\",\n    \"distance\": -80961253.97857858,\n    \"averageSpeed\": -34846343.589715324\n  }\n]"
 								}
 							]
 						},
@@ -670,7 +670,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+									"raw": "{\n  \"userId\": 10,\n  \"startTime\": \"2013-09-08T10:14:56.714Z\",\n  \"endTime\": \"2022-12-20T09:26:02.169Z\",\n  \"activityType\": \"TENNIS\",\n  \"distance\": 5488374.80082649,\n  \"averageSpeed\": -16005478.523267731\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -701,7 +701,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+											"raw": "{\n  \"userId\": 4015004,\n  \"startTime\": \"2013-09-08T10:14:56.714Z\",\n  \"endTime\": \"2022-12-20T09:26:02.169Z\",\n  \"activityType\": \"TENNIS\",\n  \"distance\": 5488374.80082649,\n  \"averageSpeed\": -16005478.523267731\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -729,7 +729,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": 65000240,\n  \"user\": {\n    \"id\": 62868744,\n    \"firstName\": \"in est proident qui\",\n    \"lastName\": \"aliqua ullamco do\",\n    \"birthdate\": \"1999-08-02\",\n    \"email\": \"sed\"\n  },\n  \"startTime\": \"1963-06-18T05:03:50.843Z\",\n  \"endTime\": \"1979-02-24T15:27:15.337Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 19496712.213180885,\n  \"averageSpeed\": -28730348.394039452\n}"
+									"body": "{\n  \"id\": 59275727,\n  \"user\": {\n    \"id\": 57992051,\n    \"firstName\": \"qui amet\",\n    \"lastName\": \"veniam dolor\",\n    \"birthdate\": \"2018-07-28\",\n    \"email\": \"Ut amet nostrud\"\n  },\n  \"startTime\": \"1998-05-30T20:08:56.035Z\",\n  \"endTime\": \"1993-12-09T09:28:39.852Z\",\n  \"activityType\": \"TENNIS\",\n  \"distance\": -54604528.26282385,\n  \"averageSpeed\": -55871564.3336217\n}"
 								}
 							]
 						},
@@ -749,7 +749,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+									"raw": "{\n  \"userId\": 4015004,\n  \"startTime\": \"2013-09-08T10:14:56.714Z\",\n  \"endTime\": \"2022-12-20T09:26:02.169Z\",\n  \"activityType\": \"TENNIS\",\n  \"distance\": 5488374.80082649,\n  \"averageSpeed\": -16005478.523267731\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -769,7 +769,7 @@
 									"variable": [
 										{
 											"key": "trainingId",
-											"value": "-30292653",
+											"value": "-12156690",
 											"description": "(Required) "
 										}
 									]
@@ -788,7 +788,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userId\": -38641160,\n  \"startTime\": \"2003-03-20T05:40:40.608Z\",\n  \"endTime\": \"1981-04-26T20:09:12.342Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 50005245.951634526,\n  \"averageSpeed\": 86284691.41996068\n}",
+											"raw": "{\n  \"userId\": 4015004,\n  \"startTime\": \"2013-09-08T10:14:56.714Z\",\n  \"endTime\": \"2022-12-20T09:26:02.169Z\",\n  \"activityType\": \"TENNIS\",\n  \"distance\": 5488374.80082649,\n  \"averageSpeed\": -16005478.523267731\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -808,7 +808,7 @@
 											"variable": [
 												{
 													"key": "trainingId",
-													"value": "-30292653",
+													"value": "-12156690",
 													"description": "(Required) "
 												}
 											]
@@ -824,7 +824,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": 65000240,\n  \"user\": {\n    \"id\": 62868744,\n    \"firstName\": \"in est proident qui\",\n    \"lastName\": \"aliqua ullamco do\",\n    \"birthdate\": \"1999-08-02\",\n    \"email\": \"sed\"\n  },\n  \"startTime\": \"1963-06-18T05:03:50.843Z\",\n  \"endTime\": \"1979-02-24T15:27:15.337Z\",\n  \"activityType\": \"RUNNING\",\n  \"distance\": 19496712.213180885,\n  \"averageSpeed\": -28730348.394039452\n}"
+									"body": "{\n  \"id\": 59275727,\n  \"user\": {\n    \"id\": 57992051,\n    \"firstName\": \"qui amet\",\n    \"lastName\": \"veniam dolor\",\n    \"birthdate\": \"2018-07-28\",\n    \"email\": \"Ut amet nostrud\"\n  },\n  \"startTime\": \"1998-05-30T20:08:56.035Z\",\n  \"endTime\": \"1993-12-09T09:28:39.852Z\",\n  \"activityType\": \"TENNIS\",\n  \"distance\": -54604528.26282385,\n  \"averageSpeed\": -55871564.3336217\n}"
 								}
 							]
 						},
@@ -852,7 +852,7 @@
 									"variable": [
 										{
 											"key": "userId",
-											"value": "-30292653",
+											"value": "10",
 											"description": "(Required) "
 										}
 									]
@@ -883,7 +883,7 @@
 											"variable": [
 												{
 													"key": "userId",
-													"value": "-30292653",
+													"value": "-12156690",
 													"description": "(Required) "
 												}
 											]
@@ -899,7 +899,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+									"body": "[\n  {\n    \"id\": 1465287,\n    \"user\": {\n      \"id\": -48916939,\n      \"firstName\": \"qui aliqua\",\n      \"lastName\": \"dolore ex ea incididunt\",\n      \"birthdate\": \"1955-07-30\",\n      \"email\": \"consectetur ea dolore officia\"\n    },\n    \"startTime\": \"1978-04-14T14:59:48.858Z\",\n    \"endTime\": \"2007-06-28T23:05:32.789Z\",\n    \"activityType\": \"SWIMMING\",\n    \"distance\": 3271712.881821558,\n    \"averageSpeed\": 69256046.22183695\n  },\n  {\n    \"id\": -70602661,\n    \"user\": {\n      \"id\": -80837268,\n      \"firstName\": \"ut deserunt\",\n      \"lastName\": \"ea est Excepteur ut pariatur\",\n      \"birthdate\": \"2021-09-03\",\n      \"email\": \"voluptate ex commodo\"\n    },\n    \"startTime\": \"1975-03-25T11:56:03.640Z\",\n    \"endTime\": \"1974-10-25T06:32:43.047Z\",\n    \"activityType\": \"WALKING\",\n    \"distance\": -80961253.97857858,\n    \"averageSpeed\": -34846343.589715324\n  }\n]"
 								}
 							]
 						},
@@ -927,7 +927,7 @@
 									"variable": [
 										{
 											"key": "afterTime",
-											"value": "2018-05-07T07:14:29.714Z",
+											"value": "1964-08-19T18:52:46.105Z",
 											"description": "(Required) "
 										}
 									]
@@ -958,7 +958,7 @@
 											"variable": [
 												{
 													"key": "afterTime",
-													"value": "2018-05-07T07:14:29.714Z",
+													"value": "1964-08-19T18:52:46.105Z",
 													"description": "(Required) "
 												}
 											]
@@ -974,7 +974,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+									"body": "[\n  {\n    \"id\": 1465287,\n    \"user\": {\n      \"id\": -48916939,\n      \"firstName\": \"qui aliqua\",\n      \"lastName\": \"dolore ex ea incididunt\",\n      \"birthdate\": \"1955-07-30\",\n      \"email\": \"consectetur ea dolore officia\"\n    },\n    \"startTime\": \"1978-04-14T14:59:48.858Z\",\n    \"endTime\": \"2007-06-28T23:05:32.789Z\",\n    \"activityType\": \"SWIMMING\",\n    \"distance\": 3271712.881821558,\n    \"averageSpeed\": 69256046.22183695\n  },\n  {\n    \"id\": -70602661,\n    \"user\": {\n      \"id\": -80837268,\n      \"firstName\": \"ut deserunt\",\n      \"lastName\": \"ea est Excepteur ut pariatur\",\n      \"birthdate\": \"2021-09-03\",\n      \"email\": \"voluptate ex commodo\"\n    },\n    \"startTime\": \"1975-03-25T11:56:03.640Z\",\n    \"endTime\": \"1974-10-25T06:32:43.047Z\",\n    \"activityType\": \"WALKING\",\n    \"distance\": -80961253.97857858,\n    \"averageSpeed\": -34846343.589715324\n  }\n]"
 								}
 							]
 						},
@@ -1046,7 +1046,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": 93065543,\n    \"user\": {\n      \"id\": 29805807,\n      \"firstName\": \"id amet\",\n      \"lastName\": \"laborum voluptate tempor fugiat\",\n      \"birthdate\": \"1950-06-23\",\n      \"email\": \"consectetur id Ut\"\n    },\n    \"startTime\": \"1969-01-27T09:04:04.373Z\",\n    \"endTime\": \"1980-03-25T16:09:14.691Z\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": -67991964.07653585,\n    \"averageSpeed\": -75139752.70025846\n  },\n  {\n    \"id\": -85000774,\n    \"user\": {\n      \"id\": 27763047,\n      \"firstName\": \"nostrud sed laborum exercitation\",\n      \"lastName\": \"aliqua mollit velit\",\n      \"birthdate\": \"1992-12-22\",\n      \"email\": \"occaecat volupta\"\n    },\n    \"startTime\": \"1993-09-21T02:36:44.563Z\",\n    \"endTime\": \"1949-09-18T15:08:31.004Z\",\n    \"activityType\": \"CYCLING\",\n    \"distance\": 16325270.685725763,\n    \"averageSpeed\": -71265086.40427977\n  }\n]"
+									"body": "[\n  {\n    \"id\": 1465287,\n    \"user\": {\n      \"id\": -48916939,\n      \"firstName\": \"qui aliqua\",\n      \"lastName\": \"dolore ex ea incididunt\",\n      \"birthdate\": \"1955-07-30\",\n      \"email\": \"consectetur ea dolore officia\"\n    },\n    \"startTime\": \"1978-04-14T14:59:48.858Z\",\n    \"endTime\": \"2007-06-28T23:05:32.789Z\",\n    \"activityType\": \"SWIMMING\",\n    \"distance\": 3271712.881821558,\n    \"averageSpeed\": 69256046.22183695\n  },\n  {\n    \"id\": -70602661,\n    \"user\": {\n      \"id\": -80837268,\n      \"firstName\": \"ut deserunt\",\n      \"lastName\": \"ea est Excepteur ut pariatur\",\n      \"birthdate\": \"2021-09-03\",\n      \"email\": \"voluptate ex commodo\"\n    },\n    \"startTime\": \"1975-03-25T11:56:03.640Z\",\n    \"endTime\": \"1974-10-25T06:32:43.047Z\",\n    \"activityType\": \"WALKING\",\n    \"distance\": -80961253.97857858,\n    \"averageSpeed\": -34846343.589715324\n  }\n]"
 								}
 							]
 						}
